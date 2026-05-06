@@ -11,6 +11,7 @@ export default {
         dim:     '#8b94ad',
         accent:  '#4a8eff',
         accent2: '#7c5cff',
+        text:    '#e8ecf3',
       },
       fontFamily: {
         sans: ['-apple-system','BlinkMacSystemFont','"Segoe UI"','system-ui','sans-serif'],

@@ -42,7 +42,7 @@ export function DropZone() {
           }}
         >
           <div className="text-4xl mb-3 opacity-60">📁</div>
-          <div className="text-base font-semibold mb-1.5">Drop your Connections.csv here</div>
+          <div className="text-[15px] font-semibold mb-1.5 text-text">Drop your Connections.csv here</div>
           <div className="text-dim text-sm">or click to browse — file stays in your browser</div>
         </div>
         <input

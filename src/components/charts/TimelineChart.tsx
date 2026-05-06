@@ -1,10 +1,14 @@
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
+import { useTheme } from '@/store/themeContext'
+import { getChartColors } from '@/lib/chartColors'
 
 interface Props {
   data: { month: string; count: number }[]
 }
 
 export function TimelineChart({ data }: Props) {
+  const { theme } = useTheme()
+  const c = getChartColors(theme)
   if (data.length === 0) return <div className="h-full flex items-center justify-center text-dim text-sm">No data</div>
   return (
     <ResponsiveContainer width="100%" height="100%" debounce={1}>
@@ -15,14 +19,14 @@ export function TimelineChart({ data }: Props) {
             <stop offset="100%" stopColor="#7c5cff" stopOpacity={0} />
           </linearGradient>
         </defs>
-        <CartesianGrid stroke="rgba(255,255,255,0.05)" />
-        <XAxis dataKey="month" tick={{ fill: '#8b94ad', fontSize: 11 }} tickLine={false} axisLine={false} interval="preserveStartEnd" />
-        <YAxis tick={{ fill: '#8b94ad', fontSize: 11 }} tickLine={false} axisLine={false} allowDecimals={false} />
+        <CartesianGrid stroke={c.grid} />
+        <XAxis dataKey="month" tick={{ fill: c.dim, fontSize: 11 }} tickLine={false} axisLine={false} interval="preserveStartEnd" />
+        <YAxis tick={{ fill: c.dim, fontSize: 11 }} tickLine={false} axisLine={false} allowDecimals={false} />
         <Tooltip
-          contentStyle={{ background: '#1c2440', border: '1px solid #2a3454', borderRadius: 8, fontSize: 12 }}
-          labelStyle={{ color: '#e8ecf3' }}
+          contentStyle={{ background: c.tooltipBg, border: `1px solid ${c.tooltipBorder}`, borderRadius: 8, fontSize: 12 }}
+          labelStyle={{ color: c.tooltipText }}
           itemStyle={{ color: '#7c5cff' }}
-          cursor={{ stroke: 'rgba(255,255,255,0.1)' }}
+          cursor={{ stroke: c.cursor }}
         />
         <Line
           type="monotone" dataKey="count" stroke="#7c5cff" strokeWidth={2}

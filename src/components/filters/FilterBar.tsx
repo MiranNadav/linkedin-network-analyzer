@@ -30,7 +30,7 @@ export function FilterBar() {
   const years     = [...new Set(connections.map(d => d.year).filter(Boolean))]
     .sort((a, b) => (b as number) - (a as number)).map(String)
 
-  const sel = 'bg-surface2 border border-border text-[#e8ecf3] px-3 py-2 rounded-lg text-[13px] outline-none focus:border-accent transition-colors w-full'
+  const sel = 'bg-surface2 border border-border text-text px-3 py-2 rounded-lg text-[13px] outline-none focus:border-accent transition-colors w-full'
 
   return (
     <div className="bg-surface border border-border rounded-[14px] p-4 mb-4 grid gap-2.5"
@@ -65,7 +65,7 @@ export function FilterBar() {
 
       <button
         onClick={() => dispatch({ type: 'RESET_FILTERS' })}
-        className="bg-transparent border border-border text-dim px-3.5 py-2 rounded-lg text-[13px] hover:text-[#e8ecf3] hover:border-accent transition-all whitespace-nowrap"
+        className="bg-transparent border border-border text-dim px-3.5 py-2 rounded-lg text-[13px] hover:text-text hover:border-accent transition-all whitespace-nowrap"
       >
         Clear
       </button>

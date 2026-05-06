@@ -36,7 +36,7 @@ function Pagination({ page, totalPages, onChange }: { page: number; totalPages: 
   let prev = 0
   uniq.forEach(p => { if (p - prev > 1) result.push('…'); result.push(p); prev = p })
 
-  const btn = 'px-3 py-1.5 rounded-md text-xs border border-border bg-transparent text-[#e8ecf3] hover:border-accent disabled:opacity-30 disabled:cursor-not-allowed transition-colors min-w-[34px]'
+  const btn = 'px-3 py-1.5 rounded-md text-xs border border-border bg-transparent text-text hover:border-accent disabled:opacity-30 disabled:cursor-not-allowed transition-colors min-w-[34px]'
   return (
     <div className="flex justify-center items-center gap-2 px-4 py-3 bg-surface2 border-t border-border">
       <button className={btn} disabled={page === 1} onClick={() => onChange(page - 1)}>‹ Prev</button>
@@ -68,8 +68,8 @@ export function ConnectionsTable({ rows, totalAll }: Props) {
     <>
       <div className="flex justify-between items-center mb-3 px-1">
         <p className="text-dim text-[13px]">
-          Showing <strong className="text-[#e8ecf3] font-semibold">{rows.length.toLocaleString()}</strong> of{' '}
-          <strong className="text-[#e8ecf3] font-semibold">{totalAll.toLocaleString()}</strong> connections
+          Showing <strong className="text-text font-semibold">{rows.length.toLocaleString()}</strong> of{' '}
+          <strong className="text-text font-semibold">{totalAll.toLocaleString()}</strong> connections
         </p>
         <button
           className="bg-accent border-0 text-white px-3.5 py-2 rounded-lg text-xs font-semibold hover:bg-[#3a7ce8] transition-colors"
@@ -88,7 +88,7 @@ export function ConnectionsTable({ rows, totalAll }: Props) {
                   <th
                     key={col.field}
                     onClick={() => dispatch({ type: 'SET_SORT', field: col.field })}
-                    className={`text-left px-3.5 py-3 text-[11px] font-semibold uppercase tracking-[0.6px] border-b border-border cursor-pointer select-none whitespace-nowrap hover:text-[#e8ecf3] transition-colors
+                    className={`text-left px-3.5 py-3 text-[11px] font-semibold uppercase tracking-[0.6px] border-b border-border cursor-pointer select-none whitespace-nowrap hover:text-text transition-colors
                       ${sort.field === col.field ? 'text-accent' : 'text-dim'}`}
                   >
                     {col.label}
@@ -105,7 +105,7 @@ export function ConnectionsTable({ rows, totalAll }: Props) {
                 <tr><td colSpan={7} className="text-center text-dim py-12">No connections match your filters.</td></tr>
               ) : pageRows.map((d, i) => (
                 <tr key={`${d.name}-${i}`} className="hover:bg-accent/5 transition-colors">
-                  <td className="px-3.5 py-2.5 border-b border-border text-[13px] font-semibold text-[#e8ecf3]">{d.name}</td>
+                  <td className="px-3.5 py-2.5 border-b border-border text-[13px] font-semibold text-text">{d.name}</td>
                   <td className="px-3.5 py-2.5 border-b border-border text-[13px]">{d.company}</td>
                   <td className="px-3.5 py-2.5 border-b border-border text-[13px]">{d.position}</td>
                   <td className="px-3.5 py-2.5 border-b border-border"><RoleBadge value={d.role} /></td>
