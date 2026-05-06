@@ -15,8 +15,8 @@ export function TimelineChart({ data }: Props) {
       <LineChart data={data} margin={{ top: 4, right: 4, bottom: 0, left: -10 }}>
         <defs>
           <linearGradient id="tlFill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#7c5cff" stopOpacity={0.25} />
-            <stop offset="100%" stopColor="#7c5cff" stopOpacity={0} />
+            <stop offset="0%" stopColor="#0a66c2" stopOpacity={0.25} />
+            <stop offset="100%" stopColor="#0a66c2" stopOpacity={0} />
           </linearGradient>
         </defs>
         <CartesianGrid stroke={c.grid} />
@@ -25,12 +25,12 @@ export function TimelineChart({ data }: Props) {
         <Tooltip
           contentStyle={{ background: c.tooltipBg, border: `1px solid ${c.tooltipBorder}`, borderRadius: 8, fontSize: 12 }}
           labelStyle={{ color: c.tooltipText }}
-          itemStyle={{ color: '#7c5cff' }}
+          itemStyle={{ color: '#0a66c2' }}
           cursor={{ stroke: c.cursor }}
         />
         <Line
-          type="monotone" dataKey="count" stroke="#7c5cff" strokeWidth={2}
-          dot={false} activeDot={{ r: 4, fill: '#7c5cff' }}
+          type="monotone" dataKey="count" stroke="#0a66c2" strokeWidth={2}
+          dot={false} activeDot={{ r: 4, fill: '#0a66c2' }}
           fill="url(#tlFill)"
         />
       </LineChart>

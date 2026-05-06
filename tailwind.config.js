@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        base:    '#0a0e1a',
-        surface: '#141a2e',
-        surface2:'#1c2440',
-        border:  '#2a3454',
-        dim:     '#8b94ad',
-        accent:  '#4a8eff',
-        accent2: '#7c5cff',
+        base:    '#0f1923',
+        surface: '#162232',
+        surface2:'#1d2e42',
+        border:  '#2a4060',
+        dim:     '#7a92a8',
+        accent:  '#0a66c2',
+        accent2: '#378fe9',
         text:    '#e8ecf3',
       },
       fontFamily: {

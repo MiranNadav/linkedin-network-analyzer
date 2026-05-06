@@ -2,7 +2,7 @@ import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend } from 'recha
 import { useTheme } from '@/store/themeContext'
 import { getChartColors } from '@/lib/chartColors'
 
-const COLORS = ['#7c5cff', '#4a8eff', '#06b6d4', '#10b981', '#f59e0b', '#94a3b8', '#ef4444', '#ec4899', '#64748b']
+const COLORS = ['#0a66c2', '#378fe9', '#06b6d4', '#10b981', '#f59e0b', '#94a3b8', '#ef4444', '#ec4899', '#64748b']
 
 interface Props {
   data: { name: string; value: number }[]

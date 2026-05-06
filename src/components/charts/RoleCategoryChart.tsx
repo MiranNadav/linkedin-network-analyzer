@@ -19,11 +19,11 @@ export function RoleCategoryChart({ data }: Props) {
         <Tooltip
           contentStyle={{ background: c.tooltipBg, border: `1px solid ${c.tooltipBorder}`, borderRadius: 8, fontSize: 12 }}
           labelStyle={{ color: c.tooltipText }}
-          itemStyle={{ color: '#4a8eff' }}
-          cursor={{ fill: 'rgba(74,142,255,0.06)' }}
+          itemStyle={{ color: '#0a66c2' }}
+          cursor={{ fill: 'rgba(10,102,194,0.08)' }}
         />
         <Bar dataKey="count" radius={[0, 4, 4, 0]}>
-          {data.map((_, i) => <Cell key={i} fill="#4a8eff" fillOpacity={1 - i * 0.04} />)}
+          {data.map((_, i) => <Cell key={i} fill="#0a66c2" fillOpacity={1 - i * 0.04} />)}
         </Bar>
       </BarChart>
     </ResponsiveContainer>
