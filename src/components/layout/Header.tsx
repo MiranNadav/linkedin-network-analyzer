@@ -34,7 +34,7 @@ export function Header() {
   return (
     <header className="mb-7 flex justify-between items-end flex-wrap gap-3">
       <div>
-        <h1 className="text-[28px] font-bold tracking-tight bg-gradient-to-r from-[#6dd5ff] to-[#a78bfa] bg-clip-text text-transparent">
+        <h1 className="text-[28px] font-bold tracking-tight text-text">
           LinkedIn Network Dashboard
         </h1>
         <p className="text-dim text-[13px] mt-1">
