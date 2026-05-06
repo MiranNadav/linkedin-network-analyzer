@@ -37,12 +37,12 @@ export function CompanyBreakdown({ connections }: Props) {
             placeholder="Filter companies…"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            className="bg-surface2 border border-border text-[#e8ecf3] placeholder-dim px-2.5 py-1.5 rounded-lg text-xs outline-none focus:border-accent transition-colors w-44"
+            className="bg-surface2 border border-border text-text placeholder-dim px-2.5 py-1.5 rounded-lg text-xs outline-none focus:border-accent transition-colors w-44"
           />
           <select
             value={sortBy}
             onChange={e => setSortBy(e.target.value as 'count' | 'name')}
-            className="bg-surface2 border border-border text-[#e8ecf3] px-2.5 py-1.5 rounded-lg text-xs outline-none focus:border-accent transition-colors"
+            className="bg-surface2 border border-border text-text px-2.5 py-1.5 rounded-lg text-xs outline-none focus:border-accent transition-colors"
           >
             <option value="count">Sort by count</option>
             <option value="name">Sort A→Z</option>
@@ -62,8 +62,8 @@ export function CompanyBreakdown({ connections }: Props) {
               title={company}
               className={`flex justify-between items-center px-2.5 py-2 rounded-lg text-[12.5px] text-left transition-all border
                 ${active
-                  ? 'bg-accent/15 border-accent text-[#e8ecf3]'
-                  : 'bg-surface2 border-transparent hover:bg-accent/10 hover:border-accent text-[#e8ecf3]'
+                  ? 'bg-accent/15 border-accent text-text'
+                  : 'bg-surface2 border-transparent hover:bg-accent/10 hover:border-accent text-text'
                 }`}
             >
               <span className="truncate pr-2">{company}</span>

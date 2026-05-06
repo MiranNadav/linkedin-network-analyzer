@@ -12,12 +12,33 @@ body {
   font-size: 14px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  transition: background 0.15s, color 0.15s;
+}
+
+html.light body {
+  background: #f0f4f8;
+  color: #1a2540;
 }
 
 #root { min-height: 100vh; }
+
+/* Light mode overrides — higher specificity (0,1,1) beats Tailwind's (0,1,0) */
+html.light .bg-base     { background-color: #f0f4f8; }
+html.light .bg-surface  { background-color: #ffffff; }
+html.light .bg-surface2 { background-color: #e8edf5; }
+html.light .border-border { border-color: #c5cfe0; }
+html.light .text-dim    { color: #5a6a82; }
+html.light .text-text   { color: #1a2540; }
+html.light .text-accent { color: #2563eb; }
+html.light .bg-accent   { background-color: #2563eb; }
+html.light .border-accent { border-color: #2563eb; }
+html.light .hover\:border-accent:hover { border-color: #2563eb; }
+html.light .focus\:border-accent:focus  { border-color: #2563eb; }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #2a3454; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #4a8eff; }
+html.light ::-webkit-scrollbar-thumb { background: #c5cfe0; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #2563eb; }

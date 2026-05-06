@@ -21,7 +21,7 @@ export function TopCompaniesPanel({ data }: Props) {
               dispatch({ type: 'SET_FILTER', key: 'company', value: active ? '' : company })
             }}
             className={`flex justify-between items-center px-2.5 py-2 rounded-md text-[13px] text-left transition-colors w-full
-              ${active ? 'bg-accent/15 text-accent' : 'bg-surface2 hover:bg-accent/10 text-[#e8ecf3]'}`}
+              ${active ? 'bg-accent/15 text-accent' : 'bg-surface2 hover:bg-accent/10 text-text'}`}
           >
             <span className="font-medium truncate pr-3">{company}</span>
             <span className="text-dim font-semibold tabular-nums shrink-0">{count}</span>
